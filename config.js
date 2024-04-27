@@ -9977,8 +9977,8 @@ var toReturn = {
 			fast: false,
 			loot: function () {
 				message("Your Trimps managed to pull 1 perfectly preserved bone from that Skeletimp!", "Loot", "italic", null, "bone");
-				game.global.b++;
-				game.global.lastSkeletimp = getCurrentTimestamp();
+				game.global.b += 10;
+				game.global.lastSkeletimp = Date.now();
 				updateSkeleBtn();
 			}
 		},
@@ -9991,8 +9991,8 @@ var toReturn = {
 			fast: false,
 			loot: function () {
 				message("That was a pretty big Skeletimp. Your Trimps scavenged the remains and found 2 perfectly preserved bones!", "Loot", "italic", null, "bone");
-				game.global.b += 2;
-				game.global.lastSkeletimp  = getCurrentTimestamp();
+				game.global.b += 20;
+				game.global.lastSkeletimp  = Date.now();
 				updateSkeleBtn();
 			}
 		}
